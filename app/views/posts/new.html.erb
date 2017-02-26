@@ -1,0 +1,17 @@
+<h1>Blog About It!</h1>
+
+<%= form_tag "/post", method: :post do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title %>
+  </div>
+  <div>
+    <%= label_tag :body %>
+    <%= text_area_tag :body, "Blog About It!", cols: 50, rows: 20 %>
+  </div>
+  <div>
+    <%= label_tag :category %>
+    <%= collection_select :category, :category_id, @categories, :id, :category %>
+  </div>
+  <%= submit_tag "Post!" %>
+<% end %>

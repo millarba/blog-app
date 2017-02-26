@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h3>
+<p>--------------------</p>
+<p><%= @post.body %></p>
+
+<p>Category: <%= @post.category.category %></p>
+
+<div>
+  <p class="btn btn-default"><%= link_to "Edit", "/post/#{@post.id}/edit" %></p>
+</div>
+
+<div>
+<%= form_tag "/post/#{@post.id}", method: :delete do %>
+  <%= submit_tag "Delete Post" %>
+<% end %>
+</div>

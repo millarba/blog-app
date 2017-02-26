@@ -1,0 +1,9 @@
+<h1>Create a Category</h1>
+
+<%= form_tag "/category", method: :post do %>
+  <div>
+    <%= label_tag :category %>
+    <%= text_field_tag :category %>
+  </div>
+  <%= submit_tag "Create Category" %>
+<% end %>

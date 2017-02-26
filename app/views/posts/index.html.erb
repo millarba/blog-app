@@ -1,0 +1,7 @@
+<h1>Blogs-Blogs-Blogs!</h1>
+
+<% @posts.each do |post| %>
+  <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
+  <p>--------------------</p>
+  <p><%= post.body %></p>
+<% end %>

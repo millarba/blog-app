@@ -1,0 +1,15 @@
+<%= form_tag "/post/#{@post.id}", method: :patch do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @post.title %>
+  </div>
+  <div>
+    <%= label_tag :body %>
+    <%= text_area_tag :body, @post.body, cols: 50, rows: 20 %>
+  </div>
+  <div>
+    <%= label_tag :category %>
+    <%= collection_select :category, :category_id, @categories, :id, :category, selected: @post.category_id %>
+  </div>
+  <%= submit_tag "Edit Post" %>
+<% end %> 
